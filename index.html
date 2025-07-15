@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Motors | Premium Vehicles & Properties</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+        }
+        .btn-hover {
+            transition: all 0.3s ease;
+        }
+        .btn-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .slide-up {
+            animation: slideUp 0.5s ease-out;
+        }
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-black">NEPACITY ROLEPLAY</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-black hover:text-gray-600 transition">Home</a>
+                    <a href="#cars" class="text-black hover:text-gray-600 transition">Cars</a>
+                    <a href="#businesses" class="text-black hover:text-gray-600 transition">Businesses</a>
+                    <a href="#housing" class="text-black hover:text-gray-600 transition">Housing</a>
+                    <a href="#contact" class="text-black hover:text-gray-600 transition">Contact</a>
+                    <a href="#" id="adminLink" class="text-black hover:text-gray-600 transition hidden">Admin</a>
+                </div>
+                <button id="mobileMenuButton" class="md:hidden text-black focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="mobileMenu" class="md:hidden hidden mt-4 space-y-2 pb-3">
+                <a href="#home" class="block text-black hover:text-gray-600 transition">Home</a>
+                <a href="#cars" class="block text-black hover:text-gray-600 transition">Cars</a>
+                <a href="#businesses" class="block text-black hover:text-gray-600 transition">Businesses</a>
+                <a href="#housing" class="block text-black hover:text-gray-600 transition">Housing</a>
+                <a href="#contact" class="block text-black hover:text-gray-600 transition">Contact</a>
+                <a href="#" id="adminMobileLink" class="block text-black hover:text-gray-600 transition hidden">Admin</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 slide-up">
+                    <h1 class="text-4xl md:text-5xl font-bold text-black mb-4">Premium Vehicles & Properties</h1>
+                    <p class="text-lg text-gray-700 mb-8">Discover the finest collection of luxury cars, businesses, and exclusive properties.</p>
+                    <div class="flex space-x-4">
+                        <a href="#cars" class="btn-hover bg-black text-white px-6 py-3 rounded-md font-medium">Explore Cars</a>
+                        <a href="#businesses" class="btn-hover border border-black text-black px-6 py-3 rounded-md font-medium">View Businesses</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 slide-up">
+                    <img src="assets/lamborghini.png" alt="Luxury Car" class="rounded-lg shadow-xl w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Cars Section -->
+    <section id="cars" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-black mb-2">Featured Cars</h2>
+                <div class="w-20 h-1 bg-black mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Car 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover fade-in">
+                    <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Porsche 911" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-black mb-2">Porsche 911 Turbo S</h3>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-gray-700">2023 Model</span>
+                            <span class="font-bold text-black">$203,500</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">640 HP</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Automatic</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">AWD</span>
+                        </div>
+                        <a href="#" onclick="showCarDetails(1)" class="btn-hover block w-full bg-black text-white text-center py-2 rounded-md font-medium mt-4">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Car 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover fade-in">
+                    <img src="https://images.unsplash.com/photo-1493238792000-8113da705763?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Lamborghini Aventador" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-black mb-2">Lamborghini Aventador SVJ</h3>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-gray-700">2022 Model</span>
+                            <span class="font-bold text-black">$517,770</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">759 HP</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Automatic</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">AWD</span>
+                        </div>
+                        <a href="#" onclick="showCarDetails(2)" class="btn-hover block w-full bg-black text-white text-center py-2 rounded-md font-medium mt-4">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Car 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover fade-in">
+                    <img src="https://images.unsplash.com/photo-1555626906-fcf10d6851b4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Ferrari 488" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-black mb-2">Ferrari 488 Pista</h3>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-gray-700">2021 Model</span>
+                            <span class="font-bold text-black">$350,000</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">711 HP</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Automatic</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">RWD</span>
+                        </div>
+                        <a href="#" onclick="showCarDetails(3)" class="btn-hover block w-full bg-black text-white text-center py-2 rounded-md font-medium mt-4">View Details</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="btn-hover inline-block border border-black text-black px-6 py-3 rounded-md font-medium">View All Cars</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Businesses Section -->
+    <section id="businesses" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-black mb-2">Player-Owned Businesses</h2>
+                <div class="w-20 h-1 bg-black mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Business 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover fade-in border border-gray-100">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Nightclub" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-black mb-2">Premium Nightclub</h3>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-gray-700">Entertainment</span>
+                            <span class="font-bold text-black">$1,200,000</span>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm text-gray-600">Profitability</span>
+                                <span class="text-sm font-medium text-black">High</span>
+                            </div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm text-gray-600">Upkeep</span>
+                                <span class="text-sm font-medium text-black">$9,500/week</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-sm text-gray-600">Capacity</span>
+                                <span class="text-sm font-medium text-black">150 people</span>
+                            </div>
+                        </div>
+                        <a href="#" onclick="showBusinessDetails(1)" class="btn-hover block w-full bg-black text-white text-center py-2 rounded-md font-medium mt-4">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Business 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover fade-in border border-gray-100">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Car Dealership" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-black mb-2">Luxury Auto Dealership</h3>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-gray-700">Automotive</span>
+                            <span class="font-bold text-black">$2,500,000</span>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm text-gray-600">Profitability</span>
+                                <span class="text-sm font-medium text-black">Very High</span>
+                            </div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm text-gray-600">Upkeep</span>
+                                <span class="text-sm font-medium text-black">$15,000/week</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-sm text-gray-600">Capacity</span>
+                                <span class="text-sm font-medium text-black">20 vehicles</span>
+                            </div>
+                        </div>
+                        <a href="#" onclick="showBusinessDetails(2)" class="btn-hover block w-full bg-black text-white text-center py-2 rounded-md font-medium mt-4">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Business 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover fade-in border border-gray-100">
+                    <img src="https://images.unsplash.com/photo-1518458028785-8fbcd101ebb9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Casino" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-black mb-2">Diamond Casino</h3>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-gray-700">Gambling</span>
+                            <span class="font-bold text-black">$5,000,000</span>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm text-gray-600">Profitability</span>
+                                <span class="text-sm font-medium text-black">Extreme</span>
+                            </div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm text-gray-600">Upkeep</span>
+                                <span class="text-sm font-medium text-black">$25,000/week</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-sm text-gray-600">Capacity</span>
+                                <span class="text-sm font-medium text-black">300 people</span>
+                            </div>
+                        </div>
+                        <a href="#" onclick="showBusinessDetails(3)" class="btn-hover block w-full bg-black text-white text-center py-2 rounded-md font-medium mt-4">View Details</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="btn-hover inline-block border border-black text-black px-6 py-3 rounded-md font-medium">View All Businesses</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Housing Section -->
+    <section id="housing" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-black mb-2">Premium Housing</h2>
+                <div class="w-20 h-1 bg-black mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- House 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover fade-in">
+                    <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Modern Mansion" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-black mb-2">Vinewood Hills Mansion</h3>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-gray-700">10 Bed, 8 Bath</span>
+                            <span class="font-bold text-black">$4,200,000</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Garage (6 cars)</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Pool</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Helipad</span>
+                        </div>
+                        <a href="#" onclick="showHouseDetails(1)" class="btn-hover block w-full bg-black text-white text-center py-2 rounded-md font-medium mt-4">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- House 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover fade-in">
+                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Penthouse" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-black mb-2">Eclipse Towers Penthouse</h3>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-gray-700">5 Bed, 4 Bath</span>
+                            <span class="font-bold text-black">$2,750,000</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Garage (10 cars)</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">City View</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Security</span>
+                        </div>
+                        <a href="#" onclick="showHouseDetails(2)" class="btn-hover block w-full bg-black text-white text-center py-2 rounded-md font-medium mt-4">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- House 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover fade-in">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Beach House" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-black mb-2">Del Perro Beach House</h3>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-gray-700">4 Bed, 3 Bath</span>
+                            <span class="font-bold text-black">$1,850,000</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Garage (2 cars)</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Beachfront</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Boat Dock</span>
+                        </div>
+                        <a href="#" onclick="showHouseDetails(3)" class="btn-hover block w-full bg-black text-white text-center py-2 rounded-md font-medium mt-4">View Details</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="btn-hover inline-block border border-black text-black px-6 py-3 rounded-md font-medium">View All Properties</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-black mb-2">Contact Us</h2>
+                <div class="w-20 h-1 bg-black mx-auto"></div>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <form>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-2">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent">
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <label for="subject" class="block text-gray-700 mb-2">Subject</label>
+                        <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent">
+                    </div>
+                    <div class="mt-6">
+                        <label for="message" class="block text-gray-700 mb-2">Message</label>
+                        <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"></textarea>
+                    </div>
+                    <div class="mt-8">
+                        <button type="submit" class="btn-hover bg-black text-white px-6 py-3 rounded-md font-medium w-full md:w-auto">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">NEPACITY ROLEPLAY</h3>
+                    <p class="text-gray-400">Premium vehicles and properties for the discerning client.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#cars" class="text-gray-400 hover:text-white transition">Cars</a></li>
+                        <li><a href="#businesses" class="text-gray-400 hover:text-white transition">Businesses</a></li>
+                        <li><a href="#housing" class="text-gray-400 hover:text-white transition">Housing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>123 Luxury Avenue</li>
+                        <li>Vinewood, Los Santos</li>
+                        <li>Phone: (555) 123-4567</li>
+                        <li>Email: info@luxurymotors.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 NEPACITY ROLEPLAY. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Car Details Modal -->
+    <div id="carModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg max-w-4xl w-full max-h-screen overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-start">
+                    <h2 id="carModalTitle" class="text-3xl font-bold text-black mb-4">Car Details</h2>
+                    <button onclick="closeModal('carModal')" class="text-black hover:text-gray-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div>
+                        <img id="carModalImage" src="" alt="Car Image" class="w-full h-auto rounded-lg">
+                    </div>
+                    <div>
+                        <div class="mb-6">
+                            <h3 id="carModalName" class="text-2xl font-bold text-black mb-2"></h3>
+                            <div class="flex justify-between items-center">
+                                <span id="carModalYear" class="text-gray-700"></span>
+                                <span id="carModalPrice" class="text-2xl font-bold text-black"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div>
+                                <h4 class="font-bold text-black mb-2">Specifications</h4>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li><span class="font-medium">Engine:</span> <span id="carModalEngine"></span></li>
+                                    <li><span class="font-medium">Power:</span> <span id="carModalPower"></span></li>
+                                    <li><span class="font-medium">Transmission:</span> <span id="carModalTransmission"></span></li>
+                                    <li><span class="font-medium">Drivetrain:</span> <span id="carModalDrivetrain"></span></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-black mb-2">Performance</h4>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li><span class="font-medium">Top Speed:</span> <span id="carModalTopSpeed"></span></li>
+                                    <li><span class="font-medium">0-60 mph:</span> <span id="carModalAcceleration"></span></li>
+                                    <li><span class="font-medium">Fuel Economy:</span> <span id="carModalFuelEconomy"></span></li>
+                                    <li><span class="font-medium">Fuel Capacity:</span> <span id="carModalFuelCapacity"></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-black mb-2">Additional Information</h4>
+                            <p id="carModalDescription" class="text-gray-700"></p>
+                        </div>
+                        
+                        <button class="btn-hover bg-black text-white px-6 py-3 rounded-md font-medium w-full">Contact Dealer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Business Details Modal -->
+    <div id="businessModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg max-w-4xl w-full max-h-screen overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-start">
+                    <h2 id="businessModalTitle" class="text-3xl font-bold text-black mb-4">Business Details</h2>
+                    <button onclick="closeModal('businessModal')" class="text-black hover:text-gray-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div>
+                        <img id="businessModalImage" src="" alt="Business Image" class="w-full h-auto rounded-lg">
+                    </div>
+                    <div>
+                        <div class="mb-6">
+                            <h3 id="businessModalName" class="text-2xl font-bold text-black mb-2"></h3>
+                            <div class="flex justify-between items-center">
+                                <span id="businessModalType" class="text-gray-700"></span>
+                                <span id="businessModalPrice" class="text-2xl font-bold text-black"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-black mb-2">Features</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><span class="font-medium">Profitability:</span> <span id="businessModalProfitability"></span></li>
+                                <li><span class="font-medium">Weekly Upkeep:</span> <span id="businessModalUpkeep"></span></li>
+                                <li><span class="font-medium">Capacity:</span> <span id="businessModalCapacity"></span></li>
+                                <li><span class="font-medium">Services:</span> <span id="businessModalServices"></span></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-black mb-2">Location</h4>
+                            <div id="businessModalMap" class="h-48 bg-gray-200 rounded-lg flex items-center justify-center">
+                                <span class="text-gray-500">Map view would be displayed here</span>
+                            </div>
+                            <p id="businessModalAddress" class="text-gray-700 mt-2"></p>
+                        </div>
+                        
+                        <button class="btn-hover bg-black text-white px-6 py-3 rounded-md font-medium w-full">Contact Owner</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- House Details Modal -->
+    <div id="houseModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg max-w-4xl w-full max-h-screen overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-start">
+                    <h2 id="houseModalTitle" class="text-3xl font-bold text-black mb-4">Property Details</h2>
+                    <button onclick="closeModal('houseModal')" class="text-black hover:text-gray-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div>
+                        <img id="houseModalImage" src="" alt="House Image" class="w-full h-auto rounded-lg">
+                        <div class="grid grid-cols-2 gap-4 mt-4">
+                            <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="House Interior" class="w-full h-24 object-cover rounded">
+                            <img src="https://images.unsplash.com/photo-1600566752227-17c8dc4e0320?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="House Interior" class="w-full h-24 object-cover rounded">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="mb-6">
+                            <h3 id="houseModalName" class="text-2xl font-bold text-black mb-2"></h3>
+                            <div class="flex justify-between items-center">
+                                <span id="houseModalBedBath" class="text-gray-700"></span>
+                                <span id="houseModalPrice" class="text-2xl font-bold text-black"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-black mb-2">Features</h4>
+                            <div id="houseModalFeatures" class="flex flex-wrap gap-2 mb-4"></div>
+                            <p id="houseModalDescription" class="text-gray-700"></p>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-black mb-2">Location</h4>
+                            <div id="houseModalMap" class="h-48 bg-gray-200 rounded-lg flex items-center justify-center">
+                                <span class="text-gray-500">Map view would be displayed here</span>
+                            </div>
+                            <p id="houseModalAddress" class="text-gray-700 mt-2"></p>
+                        </div>
+                        
+                        <button class="btn-hover bg-black text-white px-6 py-3 rounded-md font-medium w-full">Schedule Viewing</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Login Modal -->
+    <div id="adminLoginModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg max-w-md w-full p-8">
+            <div class="flex justify-between items-start mb-6">
+                <h2 class="text-2xl font-bold text-black">Admin Login</h2>
+                <button onclick="closeModal('adminLoginModal')" class="text-black hover:text-gray-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <form id="adminLoginForm">
+                <div class="mb-4">
+                    <label for="adminUsername" class="block text-gray-700 mb-2">Username</label>
+                    <input type="text" id="adminUsername" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent" required>
+                </div>
+                <div class="mb-6">
+                    <label for="adminPassword" class="block text-gray-700 mb-2">Password</label>
+                    <input type="password" id="adminPassword" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent" required>
+                </div>
+                <button type="submit" class="btn-hover bg-black text-white px-6 py-3 rounded-md font-medium w-full">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Panel -->
+    <div id="adminPanel" class="fixed inset-0 bg-white z-50 hidden overflow-y-auto">
+        <div class="min-h-screen">
+            <!-- Admin Header -->
+            <header class="bg-black text-white p-4 shadow-md">
+                <div class="container mx-auto flex justify-between items-center">
+                    <h1 class="text-xl font-bold">Admin Dashboard</h1>
+                    <div class="flex items-center space-x-4">
+                        <button id="darkModeToggle" class="p-2 rounded-full hover:bg-gray-800">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                            </svg>
+                        </button>
+                        <button onclick="logoutAdmin()" class="btn-hover bg-white text-black px-4 py-2 rounded-md font-medium">Logout</button>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Admin Navigation -->
+            <nav class="bg-gray-100 p-4 border-b">
+                <div class="container mx-auto">
+                    <div class="flex space-x-4">
+                        <button onclick="showAdminSection('dashboard')" class="admin-nav-btn px-4 py-2 rounded-md font-medium bg-black text-white">Dashboard</button>
+                        <button onclick="showAdminSection('cars')" class="admin-nav-btn px-4 py-2 rounded-md font-medium hover:bg-gray-200">Cars</button>
+                        <button onclick="showAdminSection('businesses')" class="admin-nav-btn px-4 py-2 rounded-md font-medium hover:bg-gray-200">Businesses</button>
+                        <button onclick="showAdminSection('housing')" class="admin-nav-btn px-4 py-2 rounded-md font-medium hover:bg-gray-200">Housing</button>
+                        <button onclick="showAdminSection('settings')" class="admin-nav-btn px-4 py-2 rounded-md font-medium hover:bg-gray-200">Settings</button>
+                    </div>
+                </div>
+            </nav>
+            
+            <!-- Admin Content -->
+            <main class="container mx-auto p-4">
+                <!-- Dashboard Section -->
+                <div id="adminDashboardSection" class="admin-section">
+                    <h2 class="text-2xl font-bold text-black mb-6">Dashboard Overview</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                            <h3 class="text-lg font-bold text-black mb-2">Total Cars</h3>
+                            <p class="text-3xl font-bold text-black">24</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                            <h3 class="text-lg font-bold text-black mb-2">Total Businesses</h3>
+                            <p class="text-3xl font-bold text-black">12</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                            <h3 class="text-lg font-bold text-black mb-2">Total Properties</h3>
+                            <p class="text-3xl font-bold text-black">18</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 mb-8">
+                        <h3 class="text-lg font-bold text-black mb-4">Recent Activity</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-gray-100 p-2 rounded-full mr-4">
+                                    <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-black">New car added: <span class="font-medium">Ferrari 488 Pista</span></p>
+                                    <p class="text-gray-600 text-sm">2 hours ago</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-gray-100 p-2 rounded-full mr-4">
+                                    <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-black">Business updated: <span class="font-medium">Premium Nightclub</span></p>
+                                    <p class="text-gray-600 text-sm">1 day ago</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-gray-100 p-2 rounded-full mr-4">
+                                    <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-black">Property deleted: <span class="font-medium">Del Perro Beach House</span></p>
+                                    <p class="text-gray-600 text-sm">3 days ago</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cars Section -->
+                <div id="adminCarsSection" class="admin-section hidden">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-2xl font-bold text-black">Manage Cars</h2>
+                        <button onclick="showAdminModal('addCarModal')" class="btn-hover bg-black text-white px-4 py-2 rounded-md font-medium">Add New Car</button>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 mb-8">
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full divide-y divide-gray-200">
+                                <thead class="bg-gray-50">
+                                    <tr>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Image</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Price</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200">
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Porsche 911" class="h-10 w-16 object-cover rounded">
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <div class="text-sm font-medium text-black">Porsche 911 Turbo S</div>
+                                            <div class="text-sm text-gray-500">2023</div>
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-black">
+                                            $203,500
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                                                Available
+                                            </span>
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                            <button onclick="showAdminModal('editCarModal')" class="text-blue-600 hover:text-blue-900 mr-3">Edit</button>
+                                            <button class="text-red-600 hover:text-red-900">Delete</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <img src="https://images.unsplash.com/photo-1493238792000-8113da705763?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Lamborghini Aventador" class="h-10 w-16 object-cover rounded">
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <div class="text-sm font-medium text-black">Lamborghini Aventador SVJ</div>
+                                            <div class="text-sm text-gray-500">2022</div>
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-black">
+                                            $517,770
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                                                Available
+                                            </span>
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                            <button onclick="showAdminModal('editCarModal')" class="text-blue-600 hover:text-blue-900 mr-3">Edit</button>
+                                            <button class="text-red-600 hover:text-red-900">Delete</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <img src="https://images.unsplash.com/photo-1555626906-fcf10d6851b4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Ferrari 488" class="h-10 w-16 object-cover rounded">
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <div class="text-sm font-medium text-black">Ferrari 488 Pista</div>
+                                            <div class="text-sm text-gray-500">2021</div>
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-black">
+                                            $350,000
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">
+                                                Reserved
+                                            </span>
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                            <button onclick="showAdminModal('editCarModal')" class="text-blue-600 hover:text-blue-900 mr-3">Edit</button>
+                                            <button class="text-red-600 hover:text-red-900">Delete</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Businesses Section -->
+                <div id="adminBusinessesSection" class="admin-section hidden">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-2xl font-bold text-black">Manage Businesses</h2>
+                        <button onclick="showAdminModal('addBusinessModal')" class="btn-hover bg-black text-white px-4 py-2 rounded-md font-medium">Add New Business</button>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 mb-8">
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full divide-y divide-gray-200">
+                                <thead class="bg-gray-50">
+                                    <tr>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Image</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Type</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Price</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200">
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Nightclub" class="h-10 w-16 object-cover rounded">
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <div class="text-sm font-medium text-black">Premium Nightclub</div>
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-black">
+                                            Entertainment
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-black">
+                                            $1,200,000
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                            <button onclick="showAdminModal('editBusinessModal')" class="text-blue-600 hover:text-blue-900 mr-3">Edit</button>
+                                            <button class="text-red-600 hover:text-red-900">Delete</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Car Dealership" class="h-10 w-16 object-cover rounded">
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <div class="text-sm font-medium text-black">Luxury Auto Dealership</div>
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-black">
+                                            Automotive
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-black">
+                                            $2,500,000
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                            <button onclick="showAdminModal('editBusinessModal')" class="text-blue-600 hover:text-blue-900 mr-3">Edit</button>
+                                            <button class="text-red-600 hover:text-red-900">Delete</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <img src="https://images.unsplash.com/photo-1518458028785-8fbcd101ebb9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Casino" class="h-10 w-16 object-cover rounded">
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <div class="text-sm font-medium text-black">Diamond Casino</div>
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-black">
+                                            Gambling
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-black">
+                                            $5,000,000
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                            <button onclick="showAdminModal('editBusinessModal')" class="text-blue-600 hover:text-blue-900 mr-3">Edit</button>
+                                            <button class="text-red-600 hover:text-red-900">Delete</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Housing Section -->
+                <div id="adminHousingSection" class="admin-section hidden">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-2xl font-bold text-black">Manage Properties</h2>
+                        <button onclick="showAdminModal('addHouseModal')" class="btn-hover bg-black text-white px-4 py-2 rounded-md font-medium">Add New Property</button>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 mb-8">
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full divide-y divide-gray-200">
+                                <thead class="bg-gray-50">
+                                    <tr>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Image</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Bed/Bath</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Price</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200">
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Modern Mansion" class="h-10 w-16 object-cover rounded">
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <div class="text-sm font-medium text-black">Vinewood Hills Mansion</div>
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-black">
+                                            10 Bed, 8 Bath
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-black">
+                                            $4,200,000
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                            <button onclick="showAdminModal('editHouseModal')" class="text-blue-600 hover:text-blue-900 mr-3">Edit</button>
+                                            <button class="text-red-600 hover:text-red-900">Delete</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Penthouse" class="h-10 w-16 object-cover rounded">
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <div class="text-sm font-medium text-black">Eclipse Towers Penthouse</div>
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-black">
+                                            5 Bed, 4 Bath
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-black">
+                                            $2,750,000
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                            <button onclick="showAdminModal('editHouseModal')" class="text-blue-600 hover:text-blue-900 mr-3">Edit</button>
+                                            <button class="text-red-600 hover:text-red-900">Delete</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Beach House" class="h-10 w-16 object-cover rounded">
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <div class="text-sm font-medium text-black">Del Perro Beach House</div>
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-black">
+                                            4 Bed, 3 Bath
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-black">
+                                            $1,850,000
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                            <button onclick="showAdminModal('editHouseModal')" class="text-blue-600 hover:text-blue-900 mr-3">Edit</button>
+                                            <button class="text-red-600 hover:text-red-900">Delete</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Settings Section -->
+                <div id="adminSettingsSection" class="admin-section hidden">
+                    <h2 class="text-2xl font-bold text-black mb-6">Settings</h2>
+                    
+                    <div class="bg-white rounded-lg shadow-md p-6 border border-gray-200 mb-8">
+                        <h3 class="text-lg font-bold text-black mb-4">Website Appearance</h3>
+                        
+                        <div class="mb-6">
+                            <label class="block text-gray-700 mb-2">Color Scheme</label
